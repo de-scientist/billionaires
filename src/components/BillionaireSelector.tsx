@@ -2,8 +2,7 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useGameStore } from "@/stores/useGameStore";
-import { Button } from "@/components/ui/button"; // shadcn/button
-
+import { Button } from "@/components/ui/button"; 
 type Billionaire = { id: string; name: string; netWorthUSD: number; avatar?: string };
 
 const fetchBillionaires = async (): Promise<Billionaire[]> => {

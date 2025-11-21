@@ -1,9 +1,10 @@
 export type Billionaire = {
   id: string;
   name: string;
-  netWorthUSD: number; // in dollars
-  avatar?: string;
-  description?: string;
+  netWorthUSD: number; // decimal
+  avatar?: string; // url
+  bio?: string;
+  country?: string;
 };
 
 export type Item = {
@@ -12,4 +13,14 @@ export type Item = {
   priceUSD: number;
   image?: string;
   category?: string;
+  description?: string;
+  stock?: number | null; // null => infinite
+};
+
+export type Purchase = {
+  id: string;
+  itemId: string;
+  itemName: string;
+  priceUSD: number;
+  timestamp: number;
 };
