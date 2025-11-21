@@ -3,8 +3,8 @@ import axios from "axios";
 import type { Item } from "@/types";
 
 export const fetchItems = async (): Promise<Item[]> => {
-  const r = await axios.get("/api/items");
-  return r.data;
+  const response = await axios.get("/api/items");
+  return response.data;
 };
 
 export const useItems = () => {
