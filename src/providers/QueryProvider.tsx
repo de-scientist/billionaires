@@ -3,12 +3,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient({
   defaultOptions: {
-    queries: { staleTime: 1000 * 60, retry: 1, refetchOnWindowFocus: false },
+    queries: { staleTime: 5 * 60_000, retry: 1, refetchOnWindowFocus: false },
   },
 });
 
-export const QueryProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => (
+export const QueryProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 );
