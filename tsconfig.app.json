@@ -8,11 +8,10 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "baseUrl": ".",
-  "paths": {
-    "@/*": ["./src/*"]
-  },
-  "forceConsistentCasingInFileNames":true,
-   
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "forceConsistentCasingInFileNames": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
