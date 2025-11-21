@@ -1,4 +1,3 @@
-// types.ts
 export type Billionaire = {
   id: string;
   name: string;
