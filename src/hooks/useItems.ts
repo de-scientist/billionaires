@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { Item } from "@/types";
+import type { Item } from "@/types";
 
 export const fetchItems = async (): Promise<Item[]> => {
   const r = await axios.get("/api/items");
@@ -8,5 +8,9 @@ export const fetchItems = async (): Promise<Item[]> => {
 };
 
 export const useItems = () => {
-  return useQuery(["items"], fetchItems, { staleTime: 1000 * 60 * 5 });
+  return useQuery({
+    queryKey: ["items"],
+    queryFn: fetchItems,
+    staleTime: 1000 * 60 * 5,
+  });
 };
