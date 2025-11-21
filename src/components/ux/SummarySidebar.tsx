@@ -2,7 +2,7 @@ import React from "react";
 import { useGameStore } from "@/stores/useGameStore";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { Avatar } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const formatCurrency = (v: number) => `$${Number(v).toLocaleString()}`;
 
@@ -24,7 +24,13 @@ export const SummarySidebar: React.FC = () => {
   return (
     <aside className="p-4 border rounded bg-white/5 w-full">
       <div className="flex items-center gap-3">
-        <Avatar src={selectedBillionaire.avatar} alt={selectedBillionaire.name} />
+        <Avatar>
+          {selectedBillionaire.avatar ? (
+            <AvatarImage src={selectedBillionaire.avatar} alt={selectedBillionaire.name} />
+          ) : (
+            <AvatarFallback>{selectedBillionaire.name?.[0] ?? "?"}</AvatarFallback>
+          )}
+        </Avatar>
         <div>
           <div className="font-semibold">{selectedBillionaire.name}</div>
           <div className="text-xs text-muted-foreground">{selectedBillionaire.bio}</div>
