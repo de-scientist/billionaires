@@ -1,0 +1,29 @@
+[
+  {
+    "id": "b1",
+    "name": "Sample Billionaire",
+    "netWorthUSD": 200000000000,
+    "avatar": "/mnt/data/WhatsApp Image 2025-11-20 at 8.29.14 PM.jpeg",
+    "bio": "A fictional billionaire for demo purposes."
+  },
+  {
+    "id": "b2",
+    "name": "Test Tycoon",
+    "netWorthUSD": 50000000000,
+    "avatar": "/images/placeholder-avatar.png",
+    "bio": "Another demo billionaire."
+  }, {
+    "id": "b3",
+    "name": "Sample Billionaire",
+    "netWorthUSD": 300000000000,
+    "avatar": "/mnt/data/WhatsApp Image 2025-11-20 at 8.29.14 PM.jpeg",
+    "bio": "A fictional billionaire for demo purposes."
+  },
+  {
+    "id": "b4",
+    "name": "Test Tycoon",
+    "netWorthUSD": 70000000000,
+    "avatar": "/images/placeholder-avatar.png",
+    "bio": "Another demo billionaire."
+  }
+]
